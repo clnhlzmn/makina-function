@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>xyz.colinholzman.makina</groupId>
-  <artifactId>Makina-functions</artifactId>
+  <artifactId>Makina-function</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <properties>
     <maven.compiler.target>11</maven.compiler.target>
@@ -18,6 +18,12 @@
       <artifactId>functions-framework-api</artifactId>
       <version>1.0.4</version>
       <scope>provided</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>xyz.colinholzman.makina</groupId>
+      <artifactId>makina-compiler</artifactId>
+      <version>0</version>
     </dependency>
   </dependencies>
 

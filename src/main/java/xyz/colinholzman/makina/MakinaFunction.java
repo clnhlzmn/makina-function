@@ -9,6 +9,9 @@ import java.io.IOException;
 public class MakinaFunction implements HttpFunction {
     @Override
     public void service(HttpRequest request, HttpResponse response) throws IOException {
+        String input[] = new String[1];
+        input[0] = "hi";
+        xyz.colinholzman.makina.MainKt.main(input);
         BufferedWriter writer = response.getWriter();
         writer.write("Hello World!");
     }
