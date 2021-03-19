@@ -34,6 +34,9 @@ public class MakinaFunction implements HttpFunction {
         PrintWriter headerWriter = new PrintWriter(headerStream);
         PrintWriter implementationWriter = new PrintWriter(implementationStream);
         
+        response.appendHeader("Access-Control-Allow-Origin", "*");
+        response.appendHeader("Access-Control-Allow-Methods", "POST");
+        response.appendHeader("Content-Type", "text/plain");
         BufferedWriter writer = response.getWriter();
         
         try {
