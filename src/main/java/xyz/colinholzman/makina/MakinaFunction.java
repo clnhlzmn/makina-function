@@ -14,6 +14,7 @@ import java.io.PrintWriter;
 import xyz.colinholzman.makina.Machine;
 import xyz.colinholzman.makina.Parse;
 import xyz.colinholzman.makina.CodeGenerator;
+import java.util.Collections;
 
 public class MakinaFunction implements HttpFunction {
     @Override
@@ -41,7 +42,7 @@ public class MakinaFunction implements HttpFunction {
         
         try {
             Machine machine = Parse.Companion.fileFromString(inputText);
-            CodeGenerator generator = new CodeGenerator(machine);
+            CodeGenerator generator = new CodeGenerator(machine, "void * ", "void * ", Collections.emptyList());
             
             generator.generateHeader(headerWriter);
             generator.generateSource(implementationWriter);
